@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Porsche Performance Concept</title>
+    <meta name="description" content="A premium filtered Porsche-inspired image gallery with fullscreen lightbox." />
+    <script>document.documentElement.classList.add("js", "is-loading");</script>
+    <link rel="icon" type="image/png" href="assets/porsche-crest.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Porsche concept home"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" decoding="async" /><span>Porsche</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a><a href="models.html">Models</a><a href="911-turbo-s.html">911 Turbo S</a><a href="heritage.html">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html" aria-current="page">Gallery</a><a href="configurator.html">Configurator</a>
+      </nav>
+      <a class="nav-cta" href="configurator.html">Configure</a>
+    </header>
+
+    <main id="main">
+      <section class="page-hero compact-hero" aria-labelledby="gallery-title">
+        <img src="assets/carrera-gts-hero-desktop.jpg" alt="Porsche 911 driving through mountain light" />
+        <div class="page-hero-shade" aria-hidden="true"></div>
+        <div class="page-hero-content reveal">
+          <p class="system-line">Gallery</p>
+          <h1 id="gallery-title">Motion, measured in frames.</h1>
+          <p>Filter the range by road, track, electric, and heritage imagery. Each frame keeps the same low-glare, cinematic treatment.</p>
+        </div>
+      </section>
+
+      <section class="section gallery-page" aria-labelledby="gallery-grid-title">
+        <div class="section-head reveal gallery-toolbar">
+          <div>
+            <p class="system-line">Image archive</p>
+            <h2 id="gallery-grid-title">Select a category.</h2>
+          </div>
+          <div class="filter-controls" aria-label="Gallery filters">
+            <button class="filter-button is-active" type="button" data-filter="all">All</button>
+            <button class="filter-button" type="button" data-filter="road">Road</button>
+            <button class="filter-button" type="button" data-filter="track">Track</button>
+            <button class="filter-button" type="button" data-filter="electric">Electric</button>
+            <button class="filter-button" type="button" data-filter="heritage">Heritage</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid gallery-masonry" data-gallery>
+          <figure class="gallery-item gallery-large reveal" data-category="track">
+            <button class="lightbox-trigger" type="button" aria-label="Open 911 silhouette image">
+              <img src="assets/911.jfif" alt="Silver 911 carrying speed through a circuit bend" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>911 silhouette</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="road">
+            <button class="lightbox-trigger" type="button" aria-label="Open 718 balance image">
+              <img src="assets/718.jfif" alt="718 Cayman in low light" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>718 balance</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="road">
+            <button class="lightbox-trigger" type="button" aria-label="Open Cayenne image">
+              <img class="cayenne-gallery" src="assets/cayenne-gallery.jpg" alt="Porsche Cayenne in a desert rock landscape" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>Cayenne</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="electric">
+            <button class="lightbox-trigger" type="button" aria-label="Open electric range image">
+              <img src="assets/taycan-2.jfif" alt="Blue Taycan in bright desert light" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>Electric range</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-wide gallery-feature reveal" data-category="track">
+            <button class="lightbox-trigger" type="button" aria-label="Open track stance image">
+              <img src="assets/911-3.jfif" alt="Silver 911 GT3 RS standing wide in a desert landscape" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>Track stance</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-category="heritage">
+            <button class="lightbox-trigger" type="button" aria-label="Open Turbo S image">
+              <img src="assets/911-turbo-s-reference.jpg" alt="992-generation 911 Turbo S on a warm coastal road" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>Turbo S</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-wide reveal" data-category="road">
+            <button class="lightbox-trigger" type="button" aria-label="Open mountain pace image">
+              <img src="assets/carrera-gts-hero-desktop.jpg" alt="Porsche 911 Carrera GTS on a mountain road" loading="lazy" decoding="async" />
+            </button>
+            <figcaption>Mountain pace</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" data-lightbox hidden>
+      <button class="lightbox-close" type="button" aria-label="Close gallery image">Close</button>
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="" data-lightbox-image />
+      <p data-lightbox-caption></p>
+    </div>
+
+    <footer class="site-footer">
+      <div><a class="brand" href="index.html"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" /><span>Porsche</span></a><p>Porsche-inspired editorial concept using supplied imagery and restrained performance surfaces.</p></div>
+      <nav aria-label="Footer models"><h2>Models</h2><a href="models.html">Model range</a><a href="911-turbo-s.html">911 Turbo S</a><a href="configurator.html">Configurator</a></nav>
+      <nav aria-label="Footer experience"><h2>Experience</h2><a href="heritage.html">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html">Gallery</a></nav>
+      <div class="footer-meta"><span>2026 Porsche-inspired system</span><span>Black / White / Grey</span></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

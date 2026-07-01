@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heritage | Porsche Performance Concept</title>
+    <meta name="description" content="A premium Porsche-inspired heritage storytelling page." />
+    <script>document.documentElement.classList.add("js", "is-loading");</script>
+    <link rel="icon" type="image/png" href="assets/porsche-crest.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Porsche concept home"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" decoding="async" /><span>Porsche</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a><a href="models.html">Models</a><a href="911-turbo-s.html">911 Turbo S</a><a href="heritage.html" aria-current="page">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html">Gallery</a><a href="configurator.html">Configurator</a>
+      </nav>
+      <a class="nav-cta" href="configurator.html">Configure</a>
+    </header>
+
+    <main id="main">
+      <section class="page-hero compact-hero" aria-labelledby="heritage-title">
+        <img src="assets/911-2-hero-desktop.png" alt="Porsche 911 hero image with dark cinematic treatment" />
+        <div class="page-hero-shade" aria-hidden="true"></div>
+        <div class="page-hero-content reveal">
+          <p class="system-line">Heritage</p>
+          <h1 id="heritage-title">A shape refined by decades.</h1>
+          <p>From early engineering discipline to the modern 911, the line is continuous: rear-engine clarity, compact volume, and usable speed.</p>
+        </div>
+      </section>
+
+      <section class="section split-feature" aria-labelledby="origins-title">
+        <div class="feature-media archival reveal"><img src="assets/porsche-crest.png" alt="Porsche crest on a dark background" loading="lazy" decoding="async" /></div>
+        <div class="feature-copy reveal">
+          <p class="system-line">Origins</p>
+          <h2 id="origins-title">Engineering before ornament.</h2>
+          <p>The Porsche story begins with efficient packaging, low mass, and trust in the driver's hands. That discipline still informs every surface.</p>
+        </div>
+      </section>
+
+      <section class="section timeline-section" aria-labelledby="history-title">
+        <div class="section-head reveal">
+          <p class="system-line">Historical timeline</p>
+          <h2 id="history-title">The 911 evolves without losing its center.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><span>1948</span><h3>First Porsche sports car</h3><p>Light construction and direct response define the early character.</p></article>
+          <article class="timeline-item reveal"><span>1963</span><h3>911 revealed</h3><p>A compact rear-engine coupe becomes the permanent reference.</p></article>
+          <article class="timeline-item reveal"><span>1975</span><h3>Turbo arrives</h3><p>Forced induction adds speed while preserving the 911 silhouette.</p></article>
+          <article class="timeline-item reveal"><span>2020</span><h3>992 Turbo S</h3><p>All-wheel drive, active aero, and everyday composure sharpen the flagship.</p></article>
+        </div>
+      </section>
+
+      <section class="section archival-grid" aria-labelledby="archive-title">
+        <div class="section-head reveal">
+          <p class="system-line">Archival-style images</p>
+          <h2 id="archive-title">Memory, rendered in motion.</h2>
+        </div>
+        <figure class="archive-card reveal"><img src="assets/911.jfif" alt="911 on circuit" loading="lazy" decoding="async" /><figcaption>Rear-engine benchmark</figcaption></figure>
+        <figure class="archive-card reveal"><img src="assets/911-1.jfif" alt="Blue 911 road stance" loading="lazy" decoding="async" /><figcaption>Road stance</figcaption></figure>
+        <figure class="archive-card reveal"><img src="assets/carrera-gts-hero-desktop.jpg" alt="911 Carrera GTS mountain road" loading="lazy" decoding="async" /><figcaption>Modern continuity</figcaption></figure>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><a class="brand" href="index.html"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" /><span>Porsche</span></a><p>Porsche-inspired editorial concept using supplied imagery and restrained performance surfaces.</p></div>
+      <nav aria-label="Footer models"><h2>Models</h2><a href="models.html">Model range</a><a href="911-turbo-s.html">911 Turbo S</a><a href="configurator.html">Configurator</a></nav>
+      <nav aria-label="Footer experience"><h2>Experience</h2><a href="heritage.html">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html">Gallery</a></nav>
+      <div class="footer-meta"><span>2026 Porsche-inspired system</span><span>Black / White / Grey</span></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurator | Porsche Performance Concept</title>
+    <meta name="description" content="A premium Porsche-inspired concept configurator for model, color, wheels, interior, and package." />
+    <script>document.documentElement.classList.add("js", "is-loading");</script>
+    <link rel="icon" type="image/png" href="assets/porsche-crest.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Porsche concept home"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" decoding="async" /><span>Porsche</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a><a href="models.html">Models</a><a href="911-turbo-s.html">911 Turbo S</a><a href="heritage.html">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html">Gallery</a><a href="configurator.html" aria-current="page">Configurator</a>
+      </nav>
+      <a class="nav-cta" href="configurator.html" aria-current="page">Configure</a>
+    </header>
+
+    <main id="main">
+      <section class="section configurator-shell" aria-labelledby="configurator-title">
+        <div class="configurator-preview reveal">
+          <p class="system-line">Concept configurator</p>
+          <h1 id="configurator-title">Build a precise specification.</h1>
+          <div class="configurator-stage">
+            <img src="assets/911-turbo-s-reference.jpg" alt="Configured Porsche preview" data-config-image />
+            <div class="paint-wash" data-config-wash aria-hidden="true"></div>
+            <div class="config-summary">
+              <span data-config-model>911 Turbo S</span>
+              <strong data-config-price>From $230,400</strong>
+            </div>
+          </div>
+        </div>
+
+        <form class="configurator-panel reveal" data-configurator>
+          <fieldset>
+            <legend>Model</legend>
+            <label><input type="radio" name="model" value="911 Turbo S" data-image="assets/911-turbo-s-reference.jpg" data-price="From $230,400" checked />911 Turbo S</label>
+            <label><input type="radio" name="model" value="Taycan Turbo GT" data-image="assets/taycan-2.jfif" data-price="From $231,995" />Taycan Turbo GT</label>
+            <label><input type="radio" name="model" value="Cayenne Turbo GT" data-image="assets/cayenne-gallery.jpg" data-price="From $203,800" />Cayenne Turbo GT</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Exterior color</legend>
+            <label><input type="radio" name="color" value="Graphite Grey" data-color="rgba(130, 136, 138, 0.18)" checked /><span class="swatch graphite"></span>Graphite Grey</label>
+            <label><input type="radio" name="color" value="Carrera White" data-color="rgba(255, 255, 255, 0.12)" /><span class="swatch white"></span>Carrera White</label>
+            <label><input type="radio" name="color" value="Gentian Blue" data-color="rgba(45, 78, 128, 0.26)" /><span class="swatch blue"></span>Gentian Blue</label>
+            <label><input type="radio" name="color" value="Carmine Red" data-color="rgba(166, 22, 28, 0.24)" /><span class="swatch red"></span>Carmine Red</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Wheels</legend>
+            <label><input type="radio" name="wheels" value="Center-lock Turbo S" checked />Center-lock Turbo S</label>
+            <label><input type="radio" name="wheels" value="RS Spyder Design" />RS Spyder Design</label>
+            <label><input type="radio" name="wheels" value="Exclusive Design" />Exclusive Design</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interior</legend>
+            <label><input type="radio" name="interior" value="Black leather" checked />Black leather</label>
+            <label><input type="radio" name="interior" value="Club leather truffle" />Club leather truffle</label>
+            <label><input type="radio" name="interior" value="Race-Tex graphite" />Race-Tex graphite</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Package</legend>
+            <label><input type="radio" name="package" value="Lightweight Package" checked />Lightweight Package</label>
+            <label><input type="radio" name="package" value="Sport Design Package" />Sport Design Package</label>
+            <label><input type="radio" name="package" value="Touring Specification" />Touring Specification</label>
+          </fieldset>
+
+          <div class="configuration-readout" aria-live="polite">
+            <span>Selected specification</span>
+            <strong data-config-readout>911 Turbo S / Graphite Grey / Center-lock Turbo S / Black leather / Lightweight Package</strong>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div><a class="brand" href="index.html"><img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" /><span>Porsche</span></a><p>Porsche-inspired editorial concept using supplied imagery and restrained performance surfaces.</p></div>
+      <nav aria-label="Footer models"><h2>Models</h2><a href="models.html">Model range</a><a href="911-turbo-s.html">911 Turbo S</a><a href="configurator.html">Configurator</a></nav>
+      <nav aria-label="Footer experience"><h2>Experience</h2><a href="heritage.html">Heritage</a><a href="motorsport.html">Motorsport</a><a href="gallery.html">Gallery</a></nav>
+      <div class="footer-meta"><span>2026 Porsche-inspired system</span><span>Black / White / Grey</span></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

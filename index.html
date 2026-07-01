@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porsche Performance Concept</title>
+    <meta
+      name="description"
+      content="A premium Porsche-inspired multi-page concept with cinematic imagery, precise model hierarchy, and interactive configuration."
+    />
+    <script>
+      document.documentElement.classList.add("js", "is-loading");
+    </script>
+    <link rel="icon" type="image/png" href="assets/porsche-crest.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Porsche concept home">
+        <img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" decoding="async" />
+        <span>Porsche</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="models.html">Models</a>
+        <a href="911-turbo-s.html">911 Turbo S</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="motorsport.html">Motorsport</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="configurator.html">Configurator</a>
+      </nav>
+
+      <a class="nav-cta" href="configurator.html">Configure</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <video
+          class="hero-video"
+          data-hero-video
+          data-video-src="assets/porsche-hero-loop.mp4"
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/carrera-gts-hero-desktop.jpg"
+          aria-hidden="true"
+        ></video>
+        <picture>
+          <source srcset="assets/carrera-gts-hero-mobile.jpg" media="(max-width: 767px)" />
+          <source srcset="assets/carrera-gts-hero-tablet.jpg" media="(max-width: 1100px)" />
+          <img class="hero-media" src="assets/carrera-gts-hero-desktop.jpg" alt="Porsche 911 Carrera GTS driving through a mountain road at golden hour" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="hero-content reveal">
+          <p class="system-line">PDS / Monochrome Performance</p>
+          <h1 id="hero-title">Precision in motion. Restraint at speed.</h1>
+          <p class="hero-copy">
+            A low-glare performance interface built around mechanical clarity, exact
+            visual rhythm, and the confidence of a car held in reserve.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="models.html">Explore range</a>
+            <a class="button button-secondary" href="911-turbo-s.html">View flagship</a>
+          </div>
+        </div>
+
+        <div class="hero-rail reveal" aria-label="Highlights">
+          <div>
+            <span>01</span>
+            <strong>Low glare focus</strong>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Chassis-led pace</strong>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Measured response</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section heritage" id="heritage-preview" aria-labelledby="heritage-preview-title">
+        <div class="heritage-copy reveal">
+          <p class="system-line">Heritage preview</p>
+          <h2 id="heritage-preview-title">Driven by lineage. Tuned for control.</h2>
+          <p>
+            Reduced surfaces keep attention on proportion, traction, and feedback:
+            the familiar engineering signals that make speed feel measured rather than loud.
+          </p>
+          <a class="button button-secondary section-link" href="heritage.html">Explore heritage</a>
+        </div>
+        <div class="heritage-panel reveal">
+          <img class="turbo-reference" src="assets/911-turbo-s-reference.jpg" alt="992-generation Porsche 911 Turbo S driving on a warm coastal road" loading="lazy" decoding="async" />
+          <div class="heritage-stat">
+            <span>Reference line</span>
+            <strong>911 Turbo S</strong>
+            <span>Twin-turbo flat-six.<br />640 PS.<br />Timeless engineering.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section models" aria-labelledby="featured-models-title">
+        <div class="section-head reveal">
+          <p class="system-line">Featured models</p>
+          <h2 id="featured-models-title">Performance, edited.</h2>
+          <p>
+            Three calibrated expressions of Porsche performance, separated by layout,
+            power delivery, and intent.
+          </p>
+        </div>
+
+        <div class="model-grid">
+          <article class="model-card reveal">
+            <img src="assets/911-1.jfif" alt="Blue 911 Carrera in a low road stance" loading="lazy" decoding="async" />
+            <div class="card-body">
+              <div class="card-kicker">Rear-engine benchmark</div>
+              <h3>911 Carrera</h3>
+              <p>Twin-turbo flat-six response, rear-axle traction, and the familiar 911 driving position.</p>
+              <dl>
+                <div><dt>Power</dt><dd>394 PS</dd></div>
+                <div><dt>0-100</dt><dd>4.1 s</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <img src="assets/718.jfif" alt="718 Cayman GTS 4.0 in low evening light" loading="lazy" decoding="async" />
+            <div class="card-body">
+              <div class="card-kicker">Naturally aspirated balance</div>
+              <h3>718 Cayman GTS 4.0</h3>
+              <p>Mid-engine geometry, a 4.0-litre flat-six, and compact inputs tuned for precision.</p>
+              <dl>
+                <div><dt>Power</dt><dd>400 PS</dd></div>
+                <div><dt>Top speed</dt><dd>293 km/h</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="model-card reveal">
+            <img src="assets/taycan-2.jfif" alt="Blue Taycan 4S in a desert landscape" loading="lazy" decoding="async" />
+            <div class="card-body">
+              <div class="card-kicker">Electric all-wheel drive</div>
+              <h3>Taycan 4S</h3>
+              <p>Dual-motor traction, 800-volt charging, and Performance Battery Plus range calibration.</p>
+              <dl>
+                <div><dt>Overboost</dt><dd>544 PS</dd></div>
+                <div><dt>WLTP range</dt><dd>Up to 645 km</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+        <div class="section-actions reveal">
+          <a class="button button-primary" href="models.html">View all models</a>
+        </div>
+      </section>
+
+      <section class="section specs" aria-labelledby="performance-preview-title">
+        <div class="section-head reveal">
+          <p class="system-line">Performance preview</p>
+          <h2 id="performance-preview-title">Measured details.</h2>
+        </div>
+
+        <div class="spec-grid">
+          <article class="spec-card reveal">
+            <span>911 Turbo S</span>
+            <strong>640 PS</strong>
+            <p>Twin-turbo flat-six with all-wheel drive traction</p>
+          </article>
+          <article class="spec-card reveal">
+            <span>718 Cayman GTS 4.0</span>
+            <strong>400 PS</strong>
+            <p>Naturally aspirated flat-six, mid-engine layout</p>
+          </article>
+          <article class="spec-card reveal">
+            <span>Taycan Turbo GT</span>
+            <strong>1,108 PS</strong>
+            <p>Electric overboost in Attack Mode, variant dependent</p>
+          </article>
+          <article class="spec-card reveal">
+            <span>963 programme</span>
+            <strong>24h</strong>
+            <p>Endurance pace measured by consistency under pressure</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-feature" aria-labelledby="motorsport-preview-title">
+        <div class="feature-media reveal">
+          <img src="assets/911-3.jfif" alt="Porsche track-focused coupe in a desert landscape" loading="lazy" decoding="async" />
+        </div>
+        <div class="feature-copy reveal">
+          <p class="system-line">Motorsport preview</p>
+          <h2 id="motorsport-preview-title">Race logic, road discipline.</h2>
+          <p>
+            Prototype endurance, GT racing, and electric competition create a shared
+            engineering language: stable aero, repeatable braking, and lap-after-lap focus.
+          </p>
+          <a class="button button-secondary" href="motorsport.html">Enter motorsport</a>
+        </div>
+      </section>
+
+      <section class="section gallery" aria-labelledby="gallery-preview-title">
+        <div class="section-head reveal">
+          <p class="system-line">Gallery preview</p>
+          <h2 id="gallery-preview-title">Motion, measured.</h2>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-large reveal">
+            <img src="assets/911.jfif" alt="Silver 911 carrying speed through a circuit bend" loading="lazy" decoding="async" />
+            <figcaption>911 silhouette</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/718.jfif" alt="718 Cayman in low light" loading="lazy" decoding="async" />
+            <figcaption>718 balance</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img class="cayenne-gallery" src="assets/cayenne-gallery.jpg" alt="Porsche Cayenne in a desert rock landscape" loading="lazy" decoding="async" />
+            <figcaption>Cayenne</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <img src="assets/taycan-2.jfif" alt="Blue Taycan in bright desert light" loading="lazy" decoding="async" />
+            <figcaption>Electric range</figcaption>
+          </figure>
+          <figure class="gallery-item gallery-wide gallery-feature reveal">
+            <img src="assets/911-3.jfif" alt="Silver 911 GT3 RS standing wide in a desert landscape" loading="lazy" decoding="async" />
+            <figcaption>Track stance</figcaption>
+          </figure>
+        </div>
+        <div class="section-actions reveal">
+          <a class="button button-primary" href="gallery.html">Open gallery</a>
+        </div>
+      </section>
+
+      <section class="section configurator-cta reveal" aria-labelledby="configurator-cta-title">
+        <p class="system-line">Configurator</p>
+        <h2 id="configurator-cta-title">Define the exact signal.</h2>
+        <p>
+          Choose model, paint, wheels, interior, and package in a restrained concept
+          configurator built to feel precise, not playful.
+        </p>
+        <a class="button button-primary" href="configurator.html">Start configuring</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <a class="brand" href="index.html" aria-label="Porsche concept home">
+          <img class="brand-mark" src="assets/porsche-crest.png" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <span>Porsche</span>
+        </a>
+        <p>
+          Porsche-inspired editorial concept using supplied imagery, variant-aware
+          specifications, and restrained performance surfaces.
+        </p>
+      </div>
+      <nav aria-label="Footer models">
+        <h2>Models</h2>
+        <a href="models.html">Model range</a>
+        <a href="911-turbo-s.html">911 Turbo S</a>
+        <a href="configurator.html">Configurator</a>
+      </nav>
+      <nav aria-label="Footer experience">
+        <h2>Experience</h2>
+        <a href="heritage.html">Heritage</a>
+        <a href="motorsport.html">Motorsport</a>
+        <a href="gallery.html">Gallery</a>
+      </nav>
+      <div class="footer-meta">
+        <span>2026 Porsche-inspired system</span>
+        <span>Black / White / Grey</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
