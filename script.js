@@ -15,19 +15,26 @@ let configImageTimer = 0;
 const finishLoading = () => {
   if (loadingFinished) return;
   loadingFinished = true;
-  root.classList.add("is-loaded");
 
-  window.setTimeout(() => {
+  if (prefersReducedMotion.matches) {
+    root.classList.add("page-ready");
     root.classList.remove("is-loading", "is-loaded");
-  }, prefersReducedMotion.matches ? 0 : 540);
+    return;
+  }
+
+  const clearLoadingState = (event) => {
+    if (event.target !== body || event.propertyName !== "opacity") return;
+    body.removeEventListener("transitionend", clearLoadingState);
+    root.classList.remove("is-loading", "is-loaded");
+  };
+
+  body.addEventListener(
+    "transitionend",
+    clearLoadingState,
+  );
+
+  root.classList.add("page-ready", "is-loaded");
 };
-
-window.requestAnimationFrame(() => {
-  root.classList.add("page-ready");
-});
-
-window.addEventListener("load", finishLoading, { once: true });
-window.setTimeout(finishLoading, 1800);
 
 // Sticky navigation behavior.
 const closeNav = () => {
@@ -76,14 +83,24 @@ navLinks.forEach((link) => {
   link.addEventListener("click", closeNav);
 });
 
-// Optional hero video. Leave data-video-src empty to use the image fallback.
+// Hero video enters only after the browser has decoded a usable frame.
 const heroVideo = document.querySelector("[data-hero-video]");
 
 const initHeroVideo = () => {
-  if (!heroVideo || prefersReducedMotion.matches) return;
+  if (!heroVideo || prefersReducedMotion.matches) {
+    if (document.readyState === "complete") {
+      finishLoading();
+    } else {
+      window.addEventListener("load", finishLoading, { once: true });
+    }
+    return;
+  }
 
   const videoSrc = heroVideo.dataset.videoSrc?.trim();
-  if (!videoSrc && !heroVideo.querySelector("source")) return;
+  if (!videoSrc && !heroVideo.querySelector("source")) {
+    window.addEventListener("load", finishLoading, { once: true });
+    return;
+  }
 
   if (videoSrc && !heroVideo.querySelector("source")) {
     const source = document.createElement("source");
@@ -92,18 +109,30 @@ const initHeroVideo = () => {
     heroVideo.append(source);
   }
 
+  const revealHeroVideo = () => {
+    heroVideo.play().catch(() => {
+      // Keep the decoded frame visible if autoplay is interrupted.
+    }).finally(() => {
+      heroVideo.classList.add("is-ready");
+      finishLoading();
+    });
+  };
+
   heroVideo.addEventListener(
     "canplay",
-    async () => {
-      heroVideo.classList.add("is-ready");
-      try {
-        await heroVideo.play();
-      } catch {
-        heroVideo.classList.remove("is-ready");
-      }
-    },
+    revealHeroVideo,
     { once: true },
   );
+
+  heroVideo.addEventListener(
+    "error",
+    finishLoading,
+    { once: true },
+  );
+
+  if (heroVideo.readyState >= 3) {
+    revealHeroVideo();
+  }
 
   heroVideo.load();
 };
@@ -111,7 +140,7 @@ const initHeroVideo = () => {
 initHeroVideo();
 
 // Smooth parallax for cinematic media only.
-const parallaxItems = document.querySelectorAll(".hero-media, .hero-video, .page-hero > img");
+const parallaxItems = document.querySelectorAll(".hero-video, .page-hero > img");
 
 const syncParallax = () => {
   if (prefersReducedMotion.matches || !parallaxItems.length) return;
@@ -128,13 +157,33 @@ const syncParallax = () => {
     const frameCenter = rect.top + rect.height / 2;
     const viewportCenter = viewportHeight / 2;
     const progress = (viewportCenter - frameCenter) / (viewportHeight + rect.height);
-    const distance = item.classList.contains("hero-media") || item.classList.contains("hero-video") ? 24 : 32;
+    const distance = item.classList.contains("hero-video") ? 24 : 32;
     const y = `${(progress * distance).toFixed(2)}px`;
 
     item.style.setProperty("--parallax-y", y);
     item.style.setProperty("--hero-y", y);
   });
 };
+
+// Heritage exhibit motion runs only while an exhibit is in view.
+const heritageExhibits = document.querySelectorAll(".heritage-exhibit");
+
+if (heritageExhibits.length && "IntersectionObserver" in window && !prefersReducedMotion.matches) {
+  const heritageObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-active", entry.isIntersecting && entry.intersectionRatio > 0.32);
+      });
+    },
+    {
+      threshold: [0, 0.32, 0.56],
+    },
+  );
+
+  heritageExhibits.forEach((section) => heritageObserver.observe(section));
+} else {
+  heritageExhibits.forEach((section) => section.classList.add("is-active"));
+}
 
 const syncScrollEffects = () => {
   const currentY = window.scrollY;

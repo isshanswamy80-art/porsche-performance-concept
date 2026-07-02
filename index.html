@@ -52,19 +52,15 @@
         <video
           class="hero-video"
           data-hero-video
-          data-video-src="assets/porsche-hero-loop.mp4"
+          autoplay
           muted
           loop
           playsinline
-          preload="metadata"
-          poster="assets/carrera-gts-hero-desktop.jpg"
+          preload="auto"
           aria-hidden="true"
-        ></video>
-        <picture>
-          <source srcset="assets/carrera-gts-hero-mobile.jpg" media="(max-width: 767px)" />
-          <source srcset="assets/carrera-gts-hero-tablet.jpg" media="(max-width: 1100px)" />
-          <img class="hero-media" src="assets/carrera-gts-hero-desktop.jpg" alt="Porsche 911 Carrera GTS driving through a mountain road at golden hour" fetchpriority="high" decoding="async" />
-        </picture>
+        >
+          <source src="assets/porsche-hero-loop.mp4" type="video/mp4" />
+        </video>
         <div class="hero-shade" aria-hidden="true"></div>
 
         <div class="hero-content reveal">

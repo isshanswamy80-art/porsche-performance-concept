@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heritage | Porsche Performance Concept</title>
-    <meta name="description" content="A premium Porsche-inspired heritage storytelling page." />
+    <meta name="description" content="A cinematic Porsche-inspired heritage timeline from the 356 to the 911 Turbo S." />
     <script>document.documentElement.classList.add("js", "is-loading");</script>
     <link rel="icon" type="image/png" href="assets/porsche-crest.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,47 +23,91 @@
       <a class="nav-cta" href="configurator.html">Configure</a>
     </header>
 
-    <main id="main">
-      <section class="page-hero compact-hero" aria-labelledby="heritage-title">
-        <img src="assets/911-2-hero-desktop.png" alt="Porsche 911 hero image with dark cinematic treatment" />
-        <div class="page-hero-shade" aria-hidden="true"></div>
-        <div class="page-hero-content reveal">
-          <p class="system-line">Heritage</p>
-          <h1 id="heritage-title">A shape refined by decades.</h1>
-          <p>From early engineering discipline to the modern 911, the line is continuous: rear-engine clarity, compact volume, and usable speed.</p>
+    <main id="main" class="heritage-timeline-page">
+      <h1 class="sr-only">Porsche Heritage Timeline</h1>
+
+      <section class="heritage-exhibit heritage-356" aria-labelledby="heritage-356-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-356.jpg" alt="Porsche 356 roadster outside a historic building" loading="eager" fetchpriority="high" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">HERITAGE</p>
+          <p class="heritage-exhibit-year">1948</p>
+          <h2 id="heritage-356-title">Porsche 356</h2>
+          <p class="heritage-exhibit-headline">The Beginning.</p>
+          <p class="heritage-exhibit-copy">Every legend has a first chapter. The 356 transformed a dream into one of the world&rsquo;s greatest automotive stories.</p>
         </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
       </section>
 
-      <section class="section split-feature" aria-labelledby="origins-title">
-        <div class="feature-media archival reveal"><img src="assets/porsche-crest.png" alt="Porsche crest on a dark background" loading="lazy" decoding="async" /></div>
-        <div class="feature-copy reveal">
-          <p class="system-line">Origins</p>
-          <h2 id="origins-title">Engineering before ornament.</h2>
-          <p>The Porsche story begins with efficient packaging, low mass, and trust in the driver's hands. That discipline still informs every surface.</p>
+      <section class="heritage-exhibit heritage-550" aria-labelledby="heritage-550-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-550-spyder.jfif" alt="Porsche 550 Spyder on an open desert road" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">MOTORSPORT</p>
+          <p class="heritage-exhibit-year">1953</p>
+          <h2 id="heritage-550-title">550 Spyder</h2>
+          <p class="heritage-exhibit-headline">Born to race.</p>
+          <p class="heritage-exhibit-copy">Built for speed. Feared on the track. Remembered forever.</p>
         </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
       </section>
 
-      <section class="section timeline-section" aria-labelledby="history-title">
-        <div class="section-head reveal">
-          <p class="system-line">Historical timeline</p>
-          <h2 id="history-title">The 911 evolves without losing its center.</h2>
+      <section class="heritage-exhibit heritage-930" aria-labelledby="heritage-930-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-930-turbo.jfif" alt="Porsche 930 Turbo driving along a coastal road" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">THE TURBO ERA</p>
+          <p class="heritage-exhibit-year">1975</p>
+          <h2 id="heritage-930-title">930 Turbo</h2>
+          <p class="heritage-exhibit-headline">The icon that made boost legendary.</p>
+          <p class="heritage-exhibit-copy">When Porsche introduced the 930 Turbo, it didn&rsquo;t just add power &mdash; it changed performance forever.</p>
         </div>
-        <div class="timeline">
-          <article class="timeline-item reveal"><span>1948</span><h3>First Porsche sports car</h3><p>Light construction and direct response define the early character.</p></article>
-          <article class="timeline-item reveal"><span>1963</span><h3>911 revealed</h3><p>A compact rear-engine coupe becomes the permanent reference.</p></article>
-          <article class="timeline-item reveal"><span>1975</span><h3>Turbo arrives</h3><p>Forced induction adds speed while preserving the 911 silhouette.</p></article>
-          <article class="timeline-item reveal"><span>2020</span><h3>992 Turbo S</h3><p>All-wheel drive, active aero, and everyday composure sharpen the flagship.</p></article>
-        </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
       </section>
 
-      <section class="section archival-grid" aria-labelledby="archive-title">
-        <div class="section-head reveal">
-          <p class="system-line">Archival-style images</p>
-          <h2 id="archive-title">Memory, rendered in motion.</h2>
+      <section class="heritage-exhibit heritage-959" aria-labelledby="heritage-959-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-959.jfif" alt="Red Porsche 959 in front of modern architectural glass" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">HERITAGE</p>
+          <p class="heritage-exhibit-year">1986</p>
+          <h2 id="heritage-959-title">Porsche 959</h2>
+          <p class="heritage-exhibit-headline">The future arrived first.</p>
+          <p class="heritage-exhibit-copy">An engineering masterpiece that redefined what a supercar could be.</p>
         </div>
-        <figure class="archive-card reveal"><img src="assets/911.jfif" alt="911 on circuit" loading="lazy" decoding="async" /><figcaption>Rear-engine benchmark</figcaption></figure>
-        <figure class="archive-card reveal"><img src="assets/911-1.jfif" alt="Blue 911 road stance" loading="lazy" decoding="async" /><figcaption>Road stance</figcaption></figure>
-        <figure class="archive-card reveal"><img src="assets/carrera-gts-hero-desktop.jpg" alt="911 Carrera GTS mountain road" loading="lazy" decoding="async" /><figcaption>Modern continuity</figcaption></figure>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
+      </section>
+
+      <section class="heritage-exhibit heritage-carrera-gt" aria-labelledby="heritage-carrera-gt-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-carrera-gt.jfif" alt="Black Porsche Carrera GT beside a dark architectural facade" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">HERITAGE</p>
+          <p class="heritage-exhibit-year">2003</p>
+          <h2 id="heritage-carrera-gt-title">Carrera GT</h2>
+          <p class="heritage-exhibit-headline">The last great analog supercar.</p>
+          <p class="heritage-exhibit-copy">Powered by a naturally aspirated V10 and engineered without compromise.</p>
+        </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
+      </section>
+
+      <section class="heritage-exhibit heritage-918" aria-labelledby="heritage-918-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-918-spyder.jfif" alt="Porsche 918 Spyder parked on a mountain road" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">HERITAGE</p>
+          <p class="heritage-exhibit-year">2013</p>
+          <h2 id="heritage-918-title">918 Spyder</h2>
+          <p class="heritage-exhibit-headline">The Hybrid Hypercar.</p>
+          <p class="heritage-exhibit-copy">Proof that efficiency and performance could coexist.</p>
+        </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
+      </section>
+
+      <section class="heritage-exhibit heritage-911" aria-labelledby="heritage-911-title">
+        <img class="heritage-exhibit-image" src="assets/heritage-photo-911-turbo-s.jfif" alt="Side view of a Porsche 911 Turbo S" loading="lazy" decoding="async" />
+        <div class="heritage-exhibit-content reveal">
+          <p class="heritage-exhibit-label">HERITAGE</p>
+          <p class="heritage-exhibit-year">2020</p>
+          <h2 id="heritage-911-title">911 Turbo S</h2>
+          <p class="heritage-exhibit-headline">The Everyday Supercar.</p>
+          <p class="heritage-exhibit-copy">Decades of engineering refined into one machine. The latest expression of everything Porsche has learned since 1948.</p>
+        </div>
+        <p class="heritage-scroll-cue" aria-hidden="true"><span></span>Scroll to continue</p>
       </section>
     </main>
 
