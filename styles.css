@@ -1091,10 +1091,11 @@ button {
   --ken-origin: center center;
   --ken-scale: 1.04;
   --content-left: clamp(24px, 4.4vw, 88px);
-  --content-bottom: clamp(88px, 9vh, 132px);
+  --content-bottom: clamp(150px, 22svh, 236px);
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   overflow: hidden;
   isolation: isolate;
   background: #050505;
@@ -1187,7 +1188,7 @@ button {
   position: absolute;
   z-index: 2;
   left: var(--content-left);
-  bottom: clamp(26px, 4vh, 48px);
+  bottom: max(clamp(26px, 4svh, 48px), env(safe-area-inset-bottom));
   display: inline-flex;
   align-items: center;
   gap: 18px;
@@ -1199,6 +1200,7 @@ button {
   letter-spacing: 0.38em;
   text-transform: uppercase;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
 }
 
 .heritage-scroll-cue span {
@@ -1223,59 +1225,59 @@ button {
 }
 
 .heritage-356 {
-  --object-position-desktop: 58% center;
-  --object-position-tablet: 65% center;
-  --object-position-mobile: 74% center;
-  --object-position-landscape: 60% 42%;
-  --ken-origin: 70% 56%;
+  --object-position-desktop: 58% 60%;
+  --object-position-tablet: 64% 56%;
+  --object-position-mobile: 62% 55%;
+  --object-position-landscape: 60% 56%;
+  --ken-origin: 66% 62%;
 }
 
 .heritage-550 {
-  --object-position-desktop: 54% center;
-  --object-position-tablet: 65% center;
-  --object-position-mobile: 76% center;
-  --object-position-landscape: 58% 44%;
-  --ken-origin: 72% 62%;
+  --object-position-desktop: 52% 62%;
+  --object-position-tablet: 46% 56%;
+  --object-position-mobile: 42% 58%;
+  --object-position-landscape: 50% 62%;
+  --ken-origin: 44% 64%;
 }
 
 .heritage-930 {
-  --object-position-desktop: 58% center;
-  --object-position-tablet: 68% center;
-  --object-position-mobile: 78% center;
-  --object-position-landscape: 62% 44%;
-  --ken-origin: 72% 52%;
+  --object-position-desktop: 58% 52%;
+  --object-position-tablet: 64% 50%;
+  --object-position-mobile: 64% 52%;
+  --object-position-landscape: 60% 54%;
+  --ken-origin: 66% 54%;
 }
 
 .heritage-959 {
-  --object-position-desktop: 56% center;
-  --object-position-tablet: 65% center;
-  --object-position-mobile: 74% center;
-  --object-position-landscape: 58% 44%;
-  --ken-origin: 68% 58%;
+  --object-position-desktop: 58% 55%;
+  --object-position-tablet: 64% 54%;
+  --object-position-mobile: 62% 56%;
+  --object-position-landscape: 60% 54%;
+  --ken-origin: 70% 60%;
 }
 
 .heritage-carrera-gt {
-  --object-position-desktop: 58% center;
-  --object-position-tablet: 69% center;
-  --object-position-mobile: 78% center;
-  --object-position-landscape: 62% 44%;
-  --ken-origin: 72% 55%;
+  --object-position-desktop: 58% 55%;
+  --object-position-tablet: 62% 54%;
+  --object-position-mobile: 63% 55%;
+  --object-position-landscape: 61% 55%;
+  --ken-origin: 64% 58%;
 }
 
 .heritage-918 {
-  --object-position-desktop: 52% center;
-  --object-position-tablet: 62% center;
-  --object-position-mobile: 64% center;
-  --object-position-landscape: 54% 44%;
-  --ken-origin: 58% 56%;
+  --object-position-desktop: 48% 56%;
+  --object-position-tablet: 42% 55%;
+  --object-position-mobile: 34% 56%;
+  --object-position-landscape: 42% 56%;
+  --ken-origin: 36% 60%;
 }
 
 .heritage-911 {
-  --object-position-desktop: 58% center;
-  --object-position-tablet: 66% center;
-  --object-position-mobile: 70% center;
-  --object-position-landscape: 60% 44%;
-  --ken-origin: 68% 58%;
+  --object-position-desktop: 54% 55%;
+  --object-position-tablet: 55% 54%;
+  --object-position-mobile: 50% 55%;
+  --object-position-landscape: 55% 54%;
+  --ken-origin: 55% 58%;
 }
 
 .heritage-timeline-page + .site-footer {
